@@ -1,0 +1,6 @@
+<% unless current_user %>
+  <%= link_to "Sign in with Instagram", user_instagram_omniauth_authorize_path %>
+<% else %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <%#= link_to "Posts", posts_path %>
+<% end %>
